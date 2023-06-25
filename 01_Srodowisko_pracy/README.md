@@ -1,0 +1,21 @@
+# 1. Środowisko pracy
+
+- ### Instalacja interpretera Python
+  - #### https://www.python.org/downloads/ (Wybieramy 3.11.*)
+- ### Instalacja IDE - Pycharm
+  - #### https://www.jetbrains.com/pycharm/download/ (Wybieramy Community)
+- ### Tworzenie projektu
+  - #### `Get from VCS` (Version Control System)
+  - #### Wprowadzamy adres `https://github.com/MichalKorzycki/Python-2023`
+- ### Obsługa interfejsu Pycharm
+- ### Przydatne skróty klawiaturowe
+  - #### https://www.jetbrains.com/help/pycharm/mastering-keyboard-shortcuts.html
+    - `Ctrl-Spacja` - podpowiada dopełnienie linii
+    - `Alt-Enter` - podpowiada rozwiązanie problemu
+    - `Shift-F10` - uruchamia skrypt
+    - itd. itd.
+  - #### Doinstalowujemy wtyczkę "Key Promoter X"
+    - Wchodzimy `File->Settings->Plugins`
+    - Wybieramy `Marketplace`
+    - Wyszukujemy `Key Promoter X`
+    - Klikamy `Install`
