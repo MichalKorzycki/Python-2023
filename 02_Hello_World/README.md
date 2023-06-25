@@ -1,4 +1,4 @@
-# Praca z konsolą pythona
+# 2. Praca z konsolą pythona
 
 - Otwórz w PyCharm `Python Console`
 - Wpisz `print('Hello World')`

@@ -13,6 +13,8 @@
     - `Ctrl-Spacja` - podpowiada dopełnienie linii
     - `Alt-Enter` - podpowiada rozwiązanie problemu
     - `Shift-F10` - uruchamia skrypt
+    - `Ctrl-Alt-L` - reformatowanie kodu
+    - `Alt-Shift-E` - uruchomienie podświetlonego kodu w konsoli
     - itd. itd.
   - #### Doinstalowujemy wtyczkę "Key Promoter X"
     - Wchodzimy `File->Settings->Plugins`

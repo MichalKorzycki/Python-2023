@@ -13,3 +13,12 @@ Móje streamy na YT: https://www.youtube.com/@BitsofData/streams
 
 ---
 Zapraszam na PyCon: https://pl.pycon.org/2023/agenda/
+
+---
+
+Python - linki:
+- https://www.tiobe.com/tiobe-index/
+- https://docs.python.org/3/
+- https://docs.python.org/3/tutorial/
+- https://www.w3schools.com/python/
+- https://realpython.com/
