@@ -20,5 +20,5 @@
 
 ---
 # Zadanie
-- stwórz pętle pobierającą napisy z wejścia aż do napotkaniu pustego napisu; wypisz  listę posortowaną alfabetycznie wczytanych napisów
-- stwórz pętle pobierającą liczby z wejścia aż do napotkaniu pustego napisu; wypisz pierwszą parzystą
+- stwórz pętle pobierającą napisy z wejścia aż do napotkania pustego napisu; wypisz  listę posortowaną alfabetycznie wczytanych napisów
+- stwórz pętle pobierającą liczby z wejścia aż do napotkania pustego napisu; wypisz pierwszą parzystą
