@@ -54,8 +54,10 @@
       - Duże litery są dla typów (będzie dalej), małe litery dla wartości
       - *"Czy będę pamiętał co ta zmienna znaczy jutro ?"* - lepsze `user_counter` niż `n13`
       - podstawiamy wartość zmiennej operatorem `=`
-
----
+      - istnieje wariant podstawienia `<operator> =` który jeszcze podstawia z operacją na zmiennej
+      - np. `a *= 2` - "pomnóż `a` przez `2`" 
+      
+      
 
 ### Przykłady
 
@@ -63,3 +65,19 @@
 
 `A = 5`
 
+`a *= 2`
+
+---
+### Zadanie
+
+- Stworzyć zmienną o wartości będącej sumą dwóch zmiennych
+
+
+---
+
+# Typizacja
+
+- w Pythonie typ zmiennej związany jest z wartością
+- nazywa się to _**DYNAMICZNYM TYPOWANIEM**_ (Python jest dynamicznym językiem)
+- Ale to nie znaczy, że można mieszać typy (przykład w pliku `konwersje_i_typizacje.py`)
+- nazywa się to _**SILNYM TYPOWANIEM**_ (Python jest silnie typizowanym językiem)

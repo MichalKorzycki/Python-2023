@@ -1,10 +1,23 @@
-o Tworzenie list
-o. Pobieranie wartości z list
-o. lterowanie po listach
-o__ Sprawdzanie czy element znajduje się na liście
-o _ Modyfikowanie zawartości listy
-*_- Dodawanie nowych wartości i wstawianie w miejsce istniejących
-+ Kasowanie elementów z listy
-o. Funkcje wbudowane w listy
-*- Sortowanie i odwracanie list
-*- Inne ciekawe funkcje i możliwości
+# 7. Listy
+
+- Tworzenie list
+- Pobieranie wartości z list
+
+        0   1   2   3
+        |   |   |   |
+      [ 4 , 5 , 6 , 7 ]
+        |   |   |   |
+       -4  -3  -2  -1
+
+- Iterowanie po listach
+- Sprawdzanie czy element znajduje się na liście
+- Modyfikowanie zawartości listy
+   - Dodawanie nowych wartości i wstawianie w miejsce istniejących
+   - Kasowanie elementów z listy
+- Funkcje wbudowane w listy https://docs.python.org/3/library/stdtypes.html#list
+- Sortowanie i odwracanie list
+
+
+---
+# Zadanie
+- stwórz pętle pobierającą napisy z wejścia aż do napotkaniu pustego napisu; wypisz  listę posortowaną alfabetycznie wczytanych napisów 
