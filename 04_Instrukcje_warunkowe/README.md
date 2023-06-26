@@ -3,8 +3,8 @@
 - Wyrażenie logiczne - coś co ma wartość `True` albo `False`
   - Porównanie `==`
   - Różny `!=`
-  - Mniejszy, więksy `<`, `>`
-  - Mniejszy, więksy `<=`, `>=`
+  - Mniejszy, większy `<`, `>`
+  - Mniejszy, większy  bądź równy `<=`, `>=`
 
 - 1 Warunek logiczny - `if` <warunek logiczny> 
   - `if` `wyrażenie logiczne` `:`
@@ -13,7 +13,7 @@
   - `else` - w przeciwnym wypadku
   - jak jest wiele warunków - to nie zagnieżdzamy tylko robimy else + if czyli `elif`
   - można budować złożone warunki przy pomocy `not`, `and` oraz `or`
-  - jest operator `:=` od Pythona 3.8 pozwalający na przypisanie w warunku
+  - jest operator `:=` od Pythona 3.8 pozwalający na przypisanie bezpośrednio w warunku
   
 
 ---
