@@ -5,6 +5,7 @@ def f():
     """
     print("OK")
 
+
 print(f.__name__)
 
 print(f.__doc__)

@@ -3,6 +3,9 @@ l = list(range(5))
 for i in l:
     print(i)
 
+for i in range(5):
+    print(i)
+
 
 class Reverse():
     def __init__(self, data):
@@ -47,7 +50,7 @@ def fib(n):
     a, b = 0, 1
     i = 0
     while i < n:
-        yield (i, a)
+        yield i, a
         a, b = b, a + b
         i += 1
 
