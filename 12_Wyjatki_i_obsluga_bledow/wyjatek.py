@@ -1,4 +1,4 @@
-l = [range(5, 10)]
+l = list(range(5, 10))
 print(l)
 try:
     i = int(input("podaj indeks "))

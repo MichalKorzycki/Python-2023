@@ -43,16 +43,14 @@ for i in range(35):
     print("n=%d => %d" % (i, fib(i)))
 
 
-
 def fib(n):
     a, b = 0, 1
-    i=0
+    i = 0
     while i < n:
         yield (i, a)
         a, b = b, a + b
         i += 1
 
+
 for i, f in fib(35):
-    print ("n=%d => %d" % (i, f))
-
-
+    print("n=%d => %d" % (i, f))

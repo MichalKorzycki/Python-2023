@@ -7,6 +7,11 @@ data = {'year': [2010, 2011, 2012, 2011, 2012, 2010, 2011, 2012],
         'losses': [5, 8, 6, 1, 5, 10, 6, 12]}
 
 s = json.dumps(data)
-s
-
-json.loads(s)
+print(s)
+print(len(s))
+print(type(s))
+print()
+data = json.loads(s)
+print(data)
+print(len(data))
+print(type(data))
