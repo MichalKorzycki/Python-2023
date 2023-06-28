@@ -4,6 +4,7 @@ import sys
 
 if __name__ == '__main__':
     country = sys.argv[1]
+    print(sys.argv)
     url = f"https://restcountries.com/v3.1/name/{country}?fullText=true"
     response = requests.request(method="GET", url=url)
 
