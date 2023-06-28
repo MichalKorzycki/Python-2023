@@ -1,3 +1,6 @@
+print(1, 2 , 6, 5)
+
+
 def test_var_args(farg, *args):
     print ("formal arg:", farg)
     print(args)
@@ -5,6 +8,7 @@ def test_var_args(farg, *args):
         print ("another arg:", arg)
 
 test_var_args(1, "two", 3)
+
 
 def test_var_kwargs(farg, **kwargs):
     print ("formal arg:", farg)

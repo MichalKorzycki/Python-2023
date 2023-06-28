@@ -4,6 +4,8 @@ def dodaj_2(x):
 
 
 dodaj_2(5)
+n = dodaj_2(5)
+print(n)
 
 
 def is_odd(x):

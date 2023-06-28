@@ -1,7 +1,7 @@
 f = None
 
 try:
-    f = open('plik.txt','a')
+    f = open('plik.txt', 'a')
     f.write("Hello\n")
 except Exception as e:
     print("Bląd")
