@@ -23,7 +23,7 @@ SET default_table_access_method = heap;
 --
 -- Name: period_type; Type: TABLE; Schema: public; Owner: my_user
 --
-CREATE SEQUENCE dimension_order_seq;
+CREATE SEQUENCE public.dimension_order_seq;
 
 
 CREATE TABLE public.period_type (
