@@ -6,6 +6,15 @@
 </head>
 <body>
     <h1>Hello World!</h1>
-    <h2>Welcome to FlaskApp!</h2>
+    <h2>{{ tytul }}</h2>
+
+<ul>
+{% for item in data  %}
+   <li>{{ item.value }}</li>
+{% else %}
+   no items
+{% endfor %}
+</ul>
+
 </body>
 </html>

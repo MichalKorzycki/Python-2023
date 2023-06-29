@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>FlaskApp</title>
+</head>
+<body>
+    <h1>Hello World!</h1>
+    <h2>{{ tytul }}</h2>
+
+<ul>
+{% for item in params  %}
+   <li>{{ item["key"] }}: {{ item.value }}</li>
+{% else %}
+   no items
+{% endfor %}
+</ul>
+
+</body>
+</html>

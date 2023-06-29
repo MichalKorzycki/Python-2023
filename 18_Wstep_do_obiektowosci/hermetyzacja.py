@@ -17,9 +17,14 @@ class Employee:
         self.__dept = dept
         self.__salary = salary
 
+    def get_salary(self):
+        return self.__salary
+
 
 john = Employee('John Doe', 'computer lab', 1000)
 john.__salary  # error
+
+john.get_salary()
 
 john._Employee__salary
 

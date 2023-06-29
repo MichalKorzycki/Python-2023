@@ -60,9 +60,9 @@ class Swallow():
         if self.type == 'European':
             return self.base_speed
         elif self.type == 'African':
-            return self.base_speed - self.load_factor * self.number_of_coconuts;
+            return self.base_speed - self.load_factor * self.number_of_coconuts
         elif self.type == 'Norwegian':
-            return self.base_speed - self.load_factor * self.number_of_coconuts * self.number_of_coconuts;
+            return self.base_speed - self.load_factor * self.number_of_coconuts * self.number_of_coconuts
         else:
             return 0
 
@@ -93,12 +93,12 @@ class EuropeanSwallow(Swallow):
 
 class AfricanSwallow(Swallow):
     def get_speed(self):
-        return self.base_speed - self.load_factor * self.number_of_coconuts;
+        return self.base_speed - self.load_factor * self.number_of_coconuts
 
 
 class NorwegianSwallow(Swallow):
     def get_speed(self):
-        return self.base_speed - self.load_factor * self.number_of_coconuts * self.number_of_coconuts;
+        return self.base_speed - self.load_factor * self.number_of_coconuts * self.number_of_coconuts
 
 
 swallow = AfricanSwallow()

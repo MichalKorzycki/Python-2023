@@ -8,9 +8,18 @@
     - założyc bazę danych `my_database` której właścicielem jest `user`
 - ## Język SQL
   - ### Data Definition Language
-  - ### Data Query Language
+    - Tworzymy tabele food item
+    - Zrzucamy tabele food item `DROP <table>;`
+  - ### Data Manipulation Language
+    - `INSERT`
+    - `SELECT`
+    - `UPDATE`
+    - `DELETE`
 
 - ### Python a bazy danych
   - `psycopg2` - postgres
   - `sqllite3`
 
+- ### Relacje w relacyjnych bazach danych
+
+- ### SQL Alchemy

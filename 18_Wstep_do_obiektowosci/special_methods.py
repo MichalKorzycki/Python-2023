@@ -38,7 +38,7 @@ class IntValue:
 a = IntValue(3)
 b = IntValue(5)
 
-b > a
+b > a # b.__gt__(a)
 
 b
 
