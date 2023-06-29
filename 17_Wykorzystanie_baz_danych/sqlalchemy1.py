@@ -13,17 +13,21 @@ Base.prepare(engine, reflect=True)
 # matching that of the table name.
 FoodItem = Base.classes.fooditem
 Orders = Base.classes.orders
-
+Item
 session = Session(engine)
 
-result = session.query(FoodItem).limit(5)
+result = session.query(FoodItem).all()
 for row in result:
     print(row.__dict__)
 
 for row in result:
-    print('\t|\t'.join( (row.id,  row.name , row.price)))
+    print('\t|\t'.join( (str(row.id),  str(row.name) , str(row.price))))
 
-result = session.query(Orders).limit(5)
+result = session.query(Orders).all()
 for row in result:
     print(row.__dict__)
 
+result = (session
+          .query(Orders, FoodItem).all())
+for row in result:
+    print(row.__dict__)

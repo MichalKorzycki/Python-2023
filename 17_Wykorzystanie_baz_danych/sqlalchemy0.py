@@ -21,6 +21,6 @@ for row in result:
     print(row.__dict__)
 
 for row in result:
-    print('\t|\t'.join( (row.id,  row.name , row.price)))
+    print('\t|\t'.join( (str(row.id),  str(row.name) , str(row.price))))
 
     
