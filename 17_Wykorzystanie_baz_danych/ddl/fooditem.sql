@@ -1,3 +1,5 @@
+SET search_path TO public ;
+
 
 CREATE TABLE IF NOT EXISTS public.fooditem
 (
