@@ -13,10 +13,10 @@ Base.prepare(engine, reflect=True)
 # matching that of the table name.
 FoodItem = Base.classes.fooditem
 Orders = Base.classes.orders
-Item
+OrdersItem = Base.classes.orders_item
 session = Session(engine)
 
-result = session.query(FoodItem).all()
+result = session.query(Orders, OrdersItem).filter(Orders.id == OrdersItem.orders_id).all()
 for row in result:
     print(row.__dict__)
 
