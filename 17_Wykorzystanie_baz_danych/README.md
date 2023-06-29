@@ -3,9 +3,9 @@
 - ## Postgres 
   - Założenie użytkownika
     - Uruchomic `pg_admin`
-    - `user` - dać wszystkie uprawnienia, zmienić hasło na `secret`
+    - `my_user` - dać wszystkie uprawnienia, zmienić hasło na `secret`
   - Założenie bazy danych
-    - założyc bazę danych `my_database` której właścicielem jest `user`
+    - założyc bazę danych `my_database` której właścicielem jest `my_user`
 - ## Język SQL
   - ### Data Definition Language
     - Tworzymy tabele food item
