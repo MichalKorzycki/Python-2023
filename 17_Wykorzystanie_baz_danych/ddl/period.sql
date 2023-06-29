@@ -21,7 +21,7 @@ SET default_tablespace = '';
 SET default_table_access_method = heap;
 
 --
--- Name: period_type; Type: TABLE; Schema: public; Owner: myuser
+-- Name: period_type; Type: TABLE; Schema: public; Owner: my_user
 --
 
 CREATE TABLE public.period_type (
@@ -29,10 +29,10 @@ CREATE TABLE public.period_type (
 );
 
 
-ALTER TABLE public.period_type OWNER TO myuser;
+ALTER TABLE public.period_type OWNER TO my_user;
 
 --
--- Data for Name: period_type; Type: TABLE DATA; Schema: public; Owner: myuser
+-- Data for Name: period_type; Type: TABLE DATA; Schema: public; Owner: my_user
 --
 
 INSERT INTO public.period_type (id) VALUES ('PERIOD_TYPE_YEAR');
@@ -41,7 +41,7 @@ INSERT INTO public.period_type (id) VALUES ('PERIOD_TYPE_MONTH');
 
 
 --
--- Name: period_type period_type_pkey; Type: CONSTRAINT; Schema: public; Owner: myuser
+-- Name: period_type period_type_pkey; Type: CONSTRAINT; Schema: public; Owner: my_user
 --
 
 ALTER TABLE ONLY public.period_type
@@ -75,7 +75,7 @@ SET default_tablespace = '';
 SET default_table_access_method = heap;
 
 --
--- Name: period_dimension; Type: TABLE; Schema: public; Owner: myuser
+-- Name: period_dimension; Type: TABLE; Schema: public; Owner: my_user
 --
 
 CREATE TABLE public.period_dimension (
@@ -92,10 +92,10 @@ CREATE TABLE public.period_dimension (
 );
 
 
-ALTER TABLE public.period_dimension OWNER TO myuser;
+ALTER TABLE public.period_dimension OWNER TO my_user;
 
 --
--- Data for Name: period_dimension; Type: TABLE DATA; Schema: public; Owner: myuser
+-- Data for Name: period_dimension; Type: TABLE DATA; Schema: public; Owner: my_user
 --
 
 INSERT INTO public.period_dimension (id, value, name, "order", created, modified, level, leaf, type_id, parent_id) VALUES ('91874745-8caa-49bf-aa3b-88ccdb9972a8', '2014Y', '2014', 1, '2023-02-16 13:58:34.575266', '2023-02-16 13:58:34.575266', 0, false, 'PERIOD_TYPE_YEAR', NULL);
@@ -237,7 +237,7 @@ INSERT INTO public.period_dimension (id, value, name, "order", created, modified
 
 
 --
--- Name: period_dimension period_dimension_pkey; Type: CONSTRAINT; Schema: public; Owner: myuser
+-- Name: period_dimension period_dimension_pkey; Type: CONSTRAINT; Schema: public; Owner: my_user
 --
 
 ALTER TABLE ONLY public.period_dimension
@@ -245,35 +245,35 @@ ALTER TABLE ONLY public.period_dimension
 
 
 --
--- Name: ix_period_dimension_name; Type: INDEX; Schema: public; Owner: myuser
+-- Name: ix_period_dimension_name; Type: INDEX; Schema: public; Owner: my_user
 --
 
 CREATE INDEX ix_period_dimension_name ON public.period_dimension USING btree (name);
 
 
 --
--- Name: ix_period_dimension_order; Type: INDEX; Schema: public; Owner: myuser
+-- Name: ix_period_dimension_order; Type: INDEX; Schema: public; Owner: my_user
 --
 
 CREATE UNIQUE INDEX ix_period_dimension_order ON public.period_dimension USING btree ("order");
 
 
 --
--- Name: ix_period_dimension_parent_id; Type: INDEX; Schema: public; Owner: myuser
+-- Name: ix_period_dimension_parent_id; Type: INDEX; Schema: public; Owner: my_user
 --
 
 CREATE INDEX ix_period_dimension_parent_id ON public.period_dimension USING btree (parent_id);
 
 
 --
--- Name: ix_period_dimension_value; Type: INDEX; Schema: public; Owner: myuser
+-- Name: ix_period_dimension_value; Type: INDEX; Schema: public; Owner: my_user
 --
 
 CREATE UNIQUE INDEX ix_period_dimension_value ON public.period_dimension USING btree (value);
 
 
 --
--- Name: period_dimension period_dimension_parent_id_fkey; Type: FK CONSTRAINT; Schema: public; Owner: myuser
+-- Name: period_dimension period_dimension_parent_id_fkey; Type: FK CONSTRAINT; Schema: public; Owner: my_user
 --
 
 ALTER TABLE ONLY public.period_dimension
@@ -281,7 +281,7 @@ ALTER TABLE ONLY public.period_dimension
 
 
 --
--- Name: period_dimension period_dimension_type_id_fkey; Type: FK CONSTRAINT; Schema: public; Owner: myuser
+-- Name: period_dimension period_dimension_type_id_fkey; Type: FK CONSTRAINT; Schema: public; Owner: my_user
 --
 
 ALTER TABLE ONLY public.period_dimension
