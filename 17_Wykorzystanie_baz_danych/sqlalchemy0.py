@@ -12,7 +12,7 @@ Base.prepare(engine, reflect=True)
 # mapped classes are now created with names by default
 # matching that of the table name.
 FoodItem = Base.classes.fooditem
-Orders = Base.classes.orders
+
 
 session = Session(engine)
 
@@ -23,7 +23,4 @@ for row in result:
 for row in result:
     print('\t|\t'.join( (row.id,  row.name , row.price)))
 
-result = session.query(Orders).limit(5)
-for row in result:
-    print(row.__dict__)
-
+    
