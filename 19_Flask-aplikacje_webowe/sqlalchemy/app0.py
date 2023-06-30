@@ -27,16 +27,10 @@ def get_users(session):
 
 
 def create_user(name, session):
-    try:
-        user = User(username=name)
-        session.add(user)
-        session.commit()
-    except sqlalchemy.exc.IntegrityError as e:
-        print(e)
-        session.rollback()
-        return False
-    else:
-        return True
+    user = User(username=name)
+    session.add(user)
+    session.commit()
+
 
 
 @app.route('/')
@@ -48,12 +42,7 @@ def hello():
 @app.route('/add')
 def add():
     args = request.args
-    no_error = create_user(args["name"], db.session)
-    if no_error:
-        tytul = "Dodano użytkownika"
-    else:
-        tytul = "Taki użytkownik już istnieje"
+    create_user(args["name"], db.session)
 
     return render_template('form.html', data=get_users(db.session),
-                           no_error=no_error,
-                           tytul=tytul)
+                           tytul="Dodano użytkownika")

@@ -24,5 +24,17 @@
 ### Stworzyć aplikację do wprowadzania i segregowania notatek opartą o bazą danych
 
 #### Baza danych:
-- Stworzyć encję (tabelę) `note` zawierającą notatkę - tytuł, treść, datę wprowadzenia
-- Stworzyć encję (tabelę) `tag`  zawierająca treść, datę wprowadzenia
+- Stworzyć encję (tabelę) `note` zawierającą notatkę - tytuł, treść,
+- Stworzyć aplikację `Flask` wyświetlającą listę tytułów notatek i możliwość dodania notatki (HTMLowy znacznik `TEXTAREA`)
+- Po kliknięciu na link z tytułem notatki (znacznik HTML `<a href="/edit">...</a>`) przejść do edycji notatki
+- Stworzyć encję (tabelę) `tag`  zawierająca oznaczenie tematu notatki (np. `work`, `home`, `todo` itp.)
+- Stworzyć szablon `Flask` pozwalający dodać i usunąć `tag`
+- Stworzyć relację m:n `note` i `tag` 
+`    notes= relationship("Note",
+                    secondary='note_tag',
+                    uselist=True,
+                    backref='tags'
+` poprzed dodanie jeszcze jednej tablicy relacyjnej `note_tag`
+- Dodać możliwośc dołożenia (i usunięcia) tagu dla danej notatki
+- Wyświetlić przy liście tytułów notatek jej tagi
+- Po kliknięciu na tag - odfiltrować tylko te wiadomości na liście, które mają kliknięty tag

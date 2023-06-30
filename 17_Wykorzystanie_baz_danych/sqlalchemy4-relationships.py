@@ -3,6 +3,9 @@ from sqlalchemy.ext.declarative import declarative_base
 from decimal import Decimal
 import warnings
 
+from sqlalchemy.orm import relationship
+
+
 warnings.filterwarnings("ignore")
 
 engine = sa.create_engine('sqlite:///:memory:')
@@ -21,6 +24,7 @@ class Product(Base):
     __tablename__ = 'product'
 
     id = sa.Column('id', sa.Integer, primary_key=True)
+    name = sa.Column('name', sa.Text)
     price = sa.Column('price', sa.Numeric(14,2))
 
 class User(Base):
@@ -30,13 +34,20 @@ class User(Base):
     first_name = sa.Column('first_name', sa.Text)
     last_name = sa.Column('last_name', sa.Text)
 
-engine.echo = True
+    products = relationship("Product",
+                    secondary='order',
+                    uselist=True,
+                    backref='users',
+                    lazy='select')
+
 Base.metadata.create_all(engine)
 
+engine.echo = True
 
 session.add(User(id=42, first_name='John', last_name='Cleese'))
 session.add(User(id=13, first_name='Sir', last_name='Robin'))
-session.add(Product(id=1, price=Decimal('2.10')))
+session.add(Product(id=1, price=Decimal('2.10'), name='Rabbit'))
+session.add(Product(id=2, price=Decimal('5.10'), name='Parrot'))
 session.add(OrderItem(product_id=1, user_id=42, qty=9))
 session.add(OrderItem(product_id=1, user_id=42, qty=2))
 session.add(OrderItem(product_id=1, user_id=13, qty=2))
@@ -44,21 +55,10 @@ session.add(OrderItem(product_id=1, user_id=13, qty=3))
 session.add(OrderItem(product_id=1, user_id=13, qty=20))
 session.commit()
 
-query = (
-    session.query(
-    (User.first_name + ' ' + User.last_name).label('seller'),
-    sa.func.count(OrderItem.id).label('unique_items'),
-    sa.func.sum(OrderItem.qty).label('items_total'),
-    sa.func.sum(OrderItem.qty * Product.price).label('order_amount'),
-    )
-    .join(OrderItem)
-    .join(Product)
-    .group_by(User.id).order_by('items_total','order_amount')
-)
-
-
-print('{0:=^40}\n{1:^40}\n{0:=^40}'.format('=', 'Query'))
-results = [row for row in session.execute(query)]
-print('{0:=^40}\n{1:^40}\n{0:=^40}'.format('=', 'Results'))
-for row in results:
-    print(row)
+john = session.query(User).get(42)
+len(john.products)
+john.products[0].name
+rabbit = john.products[0]
+len(rabbit.users)
+for u in rabbit.users:
+    print(u.last_name)
