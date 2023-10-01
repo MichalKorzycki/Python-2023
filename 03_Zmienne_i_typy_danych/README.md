@@ -9,7 +9,7 @@
     -  `float`
        -  `3.14`,  `1.2e+16`, `.5`
     - Operatory (częściowo) https://www.w3schools.com/python/python_operators.asp
-      - `+`, `-`, `/`, '*' - arytmetyczne
+      - `+`, `-`, `/`, `*` - arytmetyczne
       - `**` - potęga
       - `//` - dzielenie całkowite
       - `%` - modulo (reszta z dzielenia)

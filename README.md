@@ -12,9 +12,10 @@ Moje streamy na YT: https://www.youtube.com/@BitsofData/streams
 - Repo do streamów: https://github.com/Bits-of-Data-PL/PythonDataScience
 
 ---
-Zapraszam na PyCon: https://pl.pycon.org/2023/agenda/
+Python - popularność 
 
----
+- [Tiobe Index](https://pypl.github.io/PYPL.html)
+- [PYPL PopularitY of Programming Language Index](https://pypl.github.io/PYPL.html)
 
 Python - linki:
 - https://www.tiobe.com/tiobe-index/

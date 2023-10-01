@@ -8,6 +8,15 @@
   - #### `Get from VCS` (Version Control System)
   - #### Wprowadzamy adres `https://github.com/MichalKorzycki/Python-2023`
 - ### Obsługa interfejsu Pycharm
+- ### System wersjonowania GIT w Pycharm
+  - #### Pobieramy
+    - Pobieranie: `fetch` albo `pull`
+      - `fetch` jest bezpieczniejszy
+      - `pull` ściąga wszystkie zmiany i może nadpisać bieżące
+    - Wysyłanie:
+      - `add`
+      - `commit`
+      - `push`
 - ### Przydatne skróty klawiaturowe
   - #### https://www.jetbrains.com/help/pycharm/mastering-keyboard-shortcuts.html
     - `Ctrl-Spacja` - podpowiada dopełnienie linii
@@ -15,7 +24,7 @@
     - `Shift-F10` - uruchamia skrypt
     - `Ctrl-Alt-L` - reformatowanie kodu
     - `Alt-Shift-E` - uruchomienie podświetlonego kodu w konsoli
-    - itd. itd.
+    - itp. itd.
   - #### Doinstalowujemy wtyczkę "Key Promoter X"
     - Wchodzimy `File->Settings->Plugins`
     - Wybieramy `Marketplace`

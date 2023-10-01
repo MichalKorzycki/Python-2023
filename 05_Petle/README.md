@@ -18,5 +18,5 @@
 ---
 # Zadanie
 
-- Wypisać wszystkie liczby od 1 do 100 które spełniają warunek z poprzedniego zadania
-- wczytaj przy użyciu `input` liczbę; wypisz sumę jej cyfr
+- Wypisać wszystkie liczby od `1` do `100` które spełniają warunek z poprzedniego zadania
+- wczytaj przy użyciu `input()` liczbę; wypisz sumę jej cyfr
