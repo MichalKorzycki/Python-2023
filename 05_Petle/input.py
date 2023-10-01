@@ -1,2 +1,2 @@
-n = input("Podaj liczbę:")
-print(n)
+n = int(input("Podaj liczbę:"))
+print(f'Podałeś liczbę {n}')
