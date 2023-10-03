@@ -1,4 +1,4 @@
-f = open('README.md')
+f = open('README.md', encoding='utf8')
 
 n = 0
 
