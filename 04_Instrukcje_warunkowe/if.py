@@ -30,7 +30,14 @@ if (n == 17) or not (n == 17):
     print("Innej opcji nie ma")
 
 # := "Walrus" operator
-if i := int(input("podaj liczbę naturalną")) % 2 == 0:
+if (i := int(input("podaj liczbę naturalną"))) % 2 == 0:
     print(f'{i} jest parzyste')
 else:
     print(f'{i} jest nieparzyste')
+
+i = int(input("podaj liczbę naturalną"))
+suma_cyfr = (i % 10 + i // 10)
+if (suma_cyfr % 7 == 0) and (i % 2 == 0):
+    print(f'Dobra liczba')
+else:
+    print(f'Zła liczba')

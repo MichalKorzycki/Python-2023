@@ -24,7 +24,6 @@ while n > 0:
         break
     print(f'{n} tak')
 
-
 n = 8
 while n > 0:
     n -= 1
@@ -48,3 +47,4 @@ while n > 0:
     print(f'{n} tak')
 else:
     print('Koniec')
+

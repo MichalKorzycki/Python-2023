@@ -25,5 +25,7 @@ napis[napis.find('kot')]
 n = napis.find('k')
 napis[n:n+3]
 
-
+napis = "ala ma kota"
+napis = napis.title().replace('Ala', 'Tomek')
+napis
 

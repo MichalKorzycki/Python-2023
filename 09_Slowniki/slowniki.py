@@ -28,9 +28,12 @@ for k in s.values():
 for k in s.items():
     print(k)
 
+for k, v in s.items():
+    print(k, v)
+
 nazwy_jednosci = {0: "", 1: "jeden", 2: "dwa", 3: "trzy", 4: "cztery", 5: "pięć", 6: "sześć", 7: "siedem", 8: "osiem",
                   9: "dziewięć"}
-nazwy_jednosci.get(7)
+nazwy_jednosci.get(7, 'tej liczby nie znam')
 
 n = 3
 if n == 1:
@@ -49,7 +52,9 @@ else:
 s2 = {'d': 4}
 s|s2
 
-s+={'e':5}
+s|={'e':5}
 s
 
 'a' in s
+
+s = {1: "a", 2: 'b', "ala": [3, 4]}
