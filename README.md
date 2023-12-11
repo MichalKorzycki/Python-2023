@@ -23,3 +23,8 @@ Python - linki:
 - https://docs.python.org/3/tutorial/
 - https://www.w3schools.com/python/
 - https://realpython.com/
+
+--- 
+Jeśli nie widzisz poglądu:
+- wprowadź do `Help | Edit Custom Properties` następującą linię:
+`ide.browser.jcef.gpu.disable=true` 
