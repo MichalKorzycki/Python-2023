@@ -41,15 +41,13 @@ input[type=text]:focus {
 </style>
 </head>
 <body>
-    <h1>Hello World!</h1>
-    <h2>{{ tytul }}</h2>
+    <h1>Sesje we Flask</h1>
+    <h2>Hello {{ name }}</h2>
 
-    <a href="/add?name=zlinku">Dodanie "zlinku" do listy</a>
+<form action="/add" method="POST">
+  <label for="name">Klucz:</label><br>
+  <input type="text" id="name" name="name" value="klucz"><br>
 
-
-<form action="/add">
-  <label for="name">Nazwa:</label><br>
-  <input type="text" id="name" name="name" value="Nazwa"><br>
   <input class="button button1" type="submit" value="Dodaj !">
 </form>
 <ul>

@@ -20,7 +20,7 @@ class User(db.Model):
     username = db.Column(db.String(80), unique=True, nullable=False)
 
     def __repr__(self):
-        return '<User %r>' % self.username
+        return '<Tag %r>' % self.username
 
 
 def get_users(session):
@@ -39,6 +39,10 @@ def create_user(name, session):
     else:
         return True
 
+def remove_user(name, session):
+    user = session.query(User).filter_by(username=name).one()
+    session.delete(user)
+    session.commit()
 
 @app.route('/')
 def hello():
@@ -55,6 +59,18 @@ def add():
     else:
         tytul = "Taki użytkownik już istnieje"
 
+    return render_template('form.html', data=get_users(db.session),
+                           no_error=no_error,
+                           tytul=tytul)
+
+
+@app.route('/remove')
+def remove():
+    args = request.args
+    remove_user(args["name"], db.session)
+    no_error = True
+    if no_error:
+        tytul = "Usunieto użytkownika"
     return render_template('form.html', data=get_users(db.session),
                            no_error=no_error,
                            tytul=tytul)

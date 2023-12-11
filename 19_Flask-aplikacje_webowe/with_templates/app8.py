@@ -15,11 +15,12 @@ def hello():
 @app.route('/add', methods=['POST'])
 def add():
     received = request.form  # a multidict containing POST data
-    print(received)
-    print(received['key'])
-    print(received['val'])
+    found = [received['key'] == d['key'] for d in data]
+    print(found)
 
     data.append({'key': received['key'], 'value': received['val']})
+    print(data)
+
     # data.append({'key': received['key'], 'value': received['value']})
     return render_template('select.html', data=data, tytul="Dodano pozycję do listy")
 

@@ -7,12 +7,12 @@ app = Flask(__name__)
 data = []
 
 
-@app.route('/')
+@app.route('/', methods=['GET'])
 def hello():
     return render_template('form2.html', data=data, tytul="To jest tytul z parametru")
 
 
-@app.route('/add', methods=['POST'])
+@app.route('/add', methods=["POST"])
 def add():
     received = request.form  # a multidict containing POST data
     print(received)

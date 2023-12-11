@@ -4,7 +4,7 @@ from flask import Flask, render_template
 
 app = Flask(__name__)
 
-data = [{'value': 1, 'state': False},
+data = [{'value': 6, 'state': False},
         {'value': 2, 'state': True},
         {'value': 3, 'state': True}
         ]

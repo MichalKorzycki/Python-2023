@@ -3,7 +3,7 @@
 # >>> db.create_all()
 # >>> exit()
 #
-# Dalej uruchamiamy: flask --app app app
+# Dalej uruchamiamy: flask --app app run
 import sqlalchemy
 from flask import Flask, render_template, request
 from flask_sqlalchemy import SQLAlchemy
@@ -11,6 +11,7 @@ from flask_sqlalchemy import SQLAlchemy
 app = Flask(__name__)
 
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///users.db'
+app.config['SQLALCHEMY_ECHO'] = True
 db = SQLAlchemy(app)
 
 
@@ -19,7 +20,7 @@ class User(db.Model):
     username = db.Column(db.String(80), unique=True, nullable=False)
 
     def __repr__(self):
-        return '<User %r>' % self.username
+        return '<Tag %r>' % self.username
 
 
 def get_users(session):
@@ -30,7 +31,6 @@ def create_user(name, session):
     user = User(username=name)
     session.add(user)
     session.commit()
-
 
 
 @app.route('/')

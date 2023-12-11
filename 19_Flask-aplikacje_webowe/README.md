@@ -1,4 +1,4 @@
-# 20. Flask
+# 19. Flask
 
 - Środowiska wirtualne
   - `pip`
@@ -21,7 +21,7 @@
 ---
 # Projekt
 
-### Stworzyć aplikację do wprowadzania i segregowania notatek opartą o bazą danych
+### Stworzyć aplikację do wprowadzania i segregowania notatek opartą o bazę danych
 
 #### Baza danych:
 - Stworzyć encję (tabelę) `note` zawierającą notatkę - tytuł, treść,

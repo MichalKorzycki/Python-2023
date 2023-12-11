@@ -34,6 +34,7 @@ l += ['A', 'B']
 l
 l.pop()
 l
+l.index('A')
 
 " - ".join(["Ala", "ma", "kota"])
 "".join(["Ala", "ma", "kota"])
@@ -42,3 +43,7 @@ s2 = '.|.'
 s2.join(["Ala", "ma", "kota"])
 
 '.' in s2
+
+3 in l
+
+l.insert(2, 100)

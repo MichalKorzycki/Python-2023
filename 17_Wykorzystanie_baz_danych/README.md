@@ -29,5 +29,5 @@
 
 # Zadania
 - Załadować do bazy danych postgres pythonem zawartość pliku `foods.csv`
-- Załądować do bazy danych sqllite pythonem zawartość pliku `foods.csv` korzystając z SQLa
-- Załądować do bazy danych sqllite pythonem zawartość pliku `foods.csv` korzystając z SQL Alchemy
+- Załadować do bazy danych sqllite pythonem zawartość pliku `foods.csv` korzystając z SQLa
+- Załadować do bazy danych sqllite pythonem zawartość pliku `foods.csv` korzystając z SQL Alchemy

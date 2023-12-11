@@ -7,7 +7,7 @@ def noop_log(message):
 
 
 def get_log(mode):
-    s = {'dev': print_log}
+    s = {'dev': print_log, 'prod': noop_log}
     return s.get(mode, noop_log)
 
 env_mode = "dev"

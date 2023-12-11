@@ -5,12 +5,12 @@ import warnings
 
 from sqlalchemy.orm import relationship
 
-
 warnings.filterwarnings("ignore")
 
 engine = sa.create_engine('sqlite:///:memory:')
 Base = declarative_base()
 session = sa.orm.sessionmaker(bind=engine)()
+
 
 class OrderItem(Base):
     __tablename__ = 'order'
@@ -20,12 +20,14 @@ class OrderItem(Base):
     user_id = sa.Column('user_id', sa.Integer, sa.ForeignKey('user.id'))
     qty = sa.Column('qty', sa.Integer)
 
+
 class Product(Base):
     __tablename__ = 'product'
 
     id = sa.Column('id', sa.Integer, primary_key=True)
     name = sa.Column('name', sa.Text)
-    price = sa.Column('price', sa.Numeric(14,2))
+    price = sa.Column('price', sa.Numeric(14, 2))
+
 
 class User(Base):
     __tablename__ = 'user'
@@ -35,10 +37,11 @@ class User(Base):
     last_name = sa.Column('last_name', sa.Text)
 
     products = relationship("Product",
-                    secondary='order',
-                    uselist=True,
-                    backref='users',
-                    lazy='select')
+                            secondary='order',
+                            uselist=True,
+                            backref='users',
+                            lazy='select')
+
 
 Base.metadata.create_all(engine)
 

@@ -25,7 +25,7 @@ class MyClass:
     i = 0
 
     def __init__(self, n):
-        self.i+=1
+        self.i += 1
         self.n = n
 
     def f(self):
@@ -37,6 +37,7 @@ class MyClass:
         print(cls)
         return cls.i
 
+
 o1 = MyClass(1)
 o2 = MyClass(2)
 
@@ -47,4 +48,4 @@ o2.n
 o1.f()
 o2.get_i()
 
-
+MyClass.get_i()

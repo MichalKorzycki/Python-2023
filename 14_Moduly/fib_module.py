@@ -13,4 +13,4 @@ def fib(n):  # return Fibonacci series up to n
 
 
 if __name__ == '__main__':
-    print(f'Testowo: {fib(5)}')
+    print(f'Testowo: {fib(15)}')

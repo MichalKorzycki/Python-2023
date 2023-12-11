@@ -45,7 +45,6 @@ def fib(n):
 for i in range(35):
     print("n=%d => %d" % (i, fib(i)))
 
-
 def fib(n):
     a, b = 0, 1
     i = 0
@@ -57,3 +56,7 @@ def fib(n):
 
 for i, f in fib(35):
     print("n=%d => %d" % (i, f))
+
+data = {"Sedan": 1500, "SUV": 2000, "Pickup": 2500, "Minivan": 1600, "Van": 2400, "Semi": 13600, "Bicycle": 7,
+        "Motorcycle": 110}
+[x.upper() for x in data.keys() if data[x] > 5000]

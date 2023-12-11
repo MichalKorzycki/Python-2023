@@ -5,7 +5,7 @@ cur = con.cursor()
 cur.execute("CREATE TABLE movie(title, year, score)")
 
 res = cur.execute("SELECT name FROM sqlite_master")
-res.fetchone()
+print (res.fetchone())
 
 res = cur.execute("SELECT name FROM sqlite_master WHERE name='spam'")
 res.fetchone()

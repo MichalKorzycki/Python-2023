@@ -11,5 +11,6 @@ class B(A):
 
 
 if __name__ == '__main__':
+    print(globals())
     obj = globals()[sys.argv[1]]()
     obj.do_it()

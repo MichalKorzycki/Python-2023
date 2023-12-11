@@ -58,6 +58,7 @@ guitar.play()
 # Polimorfizm
 
 rockband = [Guitar('Bill'), Guitar('Dan'), Guitar('Jack'), Drums('Bob')]
+
 for instrument in rockband:
     instrument.play()
 
@@ -65,6 +66,7 @@ for instrument in rockband:
 
 instrument = Instrument('Bob')
 instrument.play()
+
 
 from abc import ABC, abstractmethod
 

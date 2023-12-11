@@ -1,21 +1,21 @@
-# object.__lt__(self, other)
+# object.__lt__(karta1, other)
 #
-# object.__le__(self, other)
+# object.__le__(karta1, other)
 #
-# object.__eq__(self, other)
+# object.__eq__(karta1, other)
 #
-# object.__ne__(self, other)
+# object.__ne__(karta1, other)
 #
-# object.__gt__(self, other)
+# object.__gt__(karta1, other)
 #
-# object.__ge__(self, other)
+# object.__ge__(karta1, other)
 #
 
 # object.__len__
 #
 # object.__iter__
 #
-# object.__getslice__(self,i,j)
+# object.__getslice__(karta1,i,j)
 #
 # object.__add__
 #
@@ -113,14 +113,14 @@ class IntValue:
 
     def __radd__(self, value):
         return IntValue(self.value + value)
-#############################################################
+
 
 
 a = 3
 b = IntValue(5)
 
 a + b
-
+#############################################################
 import math
 class Point:
     def __init__(self, x, y):
@@ -148,16 +148,86 @@ p
 
 #############################################################
 
-values = ('9', '10', 'J', 'Q', 'K', 'A')
+values = ('2', '3', '4', '5', '6', '7', '8', '9', '10', 'J', 'Q', 'K', 'A')
 suits = ('clubs', 'diamonds', 'hearts', 'spades')
 
 
 class Card(object):
-    def __init__(self, value, suit):
+    def __init__(self, value='A', suit='spade'):
         self.value, self.suit = value, suit
+        print(f"In init; value is {value}; suit is {suit}")
+
+    def __repr__(self):
+        return "Card('%s','%s')" % (self.value, self.suit)
+
+
+
+krol_karo = Card('K', 'diamonds')
+as_karo = Card('A', 'diamonds')
+dycha_karo = Card('10', 'diamonds')
+karty_w_rece = [ as_karo, krol_karo, dycha_karo]
+
+karty_w_rece
+
+karty_w_rece.sort()
+
+def moc_karty(karta):
+    return len(values)*suits.index(karta.suit) + values.index(karta.value)
+
+moc_karty(krol_karo)
+moc_karty(as_karo)
+moc_karty(as_karo)
+
+karty_w_rece.sort()
+
+
+karty_w_rece.sort(key=moc_karty)
+
+karty_w_rece
+
+
+
+class Card(object):
+    def __init__(self, value='A', suit='spade'):
+        self.value, self.suit = value, suit
+        print(f"In init; value is {value}; suit is {suit}")
 
     def __repr__(self):
         return "Card('%s','%s')" % (self.value, self.suit)
 
     def __eq__(self, card):
         return self.value == card.value and self.suit == card.suit
+
+    def czy_bije(self, other):
+        if self.suit == other.suit:
+            if values.index(self.value) > values.index(other.value):
+                return True
+        return False
+
+    def __gt__(self, n):
+        return self.czy_bije(n)
+
+    def __lt__(self, card):  # USED IN sort()
+        return card.czy_bije(self)
+
+krol_karo = Card('K', 'diamonds')
+as_karo = Card('A', 'diamonds')
+dycha_karo = Card('10', 'diamonds')
+karty_w_rece = [ as_karo, krol_karo, dycha_karo]
+
+as_karo.czy_bije(krol_karo)
+
+as_karo > krol_karo
+
+krol_karo < as_karo
+
+as_karo >= krol_karo
+
+
+karty_w_rece.sort(reverse=True)
+karty_w_rece
+karty_w_rece.sort()
+karty_w_rece
+
+krol_karo1 = Card('K', 'diamonds')
+krol_karo2 = Card('K', 'diamonds')

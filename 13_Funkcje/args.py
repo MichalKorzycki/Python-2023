@@ -1,8 +1,8 @@
-print(1, 2 , 6, 5)
+print(1, 2, 6, 5)
 
 
 def test_var_args(farg, *args):
-    print ("formal arg:", farg)
+    print("formal arg:", farg)
     print(args)
     for arg in args:
         print ("another arg:", arg)

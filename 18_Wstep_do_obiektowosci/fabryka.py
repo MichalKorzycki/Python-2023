@@ -16,7 +16,21 @@ class Drums(Instrument):
     def mysound(self):
         return "Booom Booooom"
 
-print(globals())
-globals()["Guitar"]
-guitar = globals()["Guitar"]('Bob')
-guitar.play()
+
+class Guitar(Instrument):
+    def __init__(self, player):
+        super().__init__(player)
+
+    def mysound(self):
+        return "Pilim pilim"
+
+
+class Saxophone(Instrument):
+    def __init__(self, player):
+        super().__init__(player)
+
+    def mysound(self):
+        return "Fiufiu"
+
+instrument = globals()[input("Podaj instrument:")]('Bob')
+instrument.play()

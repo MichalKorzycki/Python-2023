@@ -36,7 +36,7 @@ class Point:
         self.x = x
         self.y = y
 
-    @property
+
     def r(self):
         return math.sqrt(self.x * self.x + self.y * self.y)
 
@@ -45,7 +45,7 @@ p = Point(3.0, 4.0)
 p
 print(p.r)
 p.r = 7  # error
-
+p.r()
 # Anatomia obiektu
 
 print(p.__dict__)

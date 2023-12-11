@@ -1,6 +1,6 @@
 import psycopg2
 
-connect_string = "dbname=my_database user=user password=secret host=127.0.0.1"
+connect_string = "dbname=my_database user=my_user password=secret host=127.0.0.1"
 
 with psycopg2.connect(connect_string) as connection:
     try:

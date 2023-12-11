@@ -10,8 +10,8 @@ while n > 0:
     if n % 2 == 0:
         print(f'{n} tik')
         continue
-
     print(f'{n} tak')
+
 
 n = 8
 while n > 0:

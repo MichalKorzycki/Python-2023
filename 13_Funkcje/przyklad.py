@@ -70,4 +70,4 @@ def choinka(poziom, separator=" ", znak="*"):
 
 
 choinka(5)
-choinka(znak='#', poziom=6)
+choinka(poziom=5, separator="$")

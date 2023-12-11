@@ -1,7 +1,7 @@
 # 12. Wyjątki i obsługa błędów
 
 - Rodzaje błędów
-  - Programistyczne - te eleminujemy poprawiając kod
+  - Programistyczne - te eliminujemy poprawiając kod
   - Infrastruktury - nie naprawimy, ale przynajmniej komunikujemy
   - Błedne dane - tu trzeba to obsłużyć - podając np. źródło błędu
 
