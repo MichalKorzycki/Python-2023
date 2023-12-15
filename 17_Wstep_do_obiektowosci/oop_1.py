@@ -11,15 +11,15 @@ class MyClass:
 o1 = MyClass(1)
 o2 = MyClass(2)
 
+
 o1
 
 o1.i
 o2.i
 o1.n
 o2.n
-o1.f()
+o1.f() # -> f(o1)
 o2.f()
-
 
 class MyClass:
     i = 0

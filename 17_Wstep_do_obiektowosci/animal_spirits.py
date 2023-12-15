@@ -37,7 +37,12 @@ class Guitar:
         return "Dling Dling"
 
 
-orchestra = [Guitar(), Guitar(), Drums()]
+class Kaczka:
+    def play(self):
+        return "Kwa kwa"
+
+
+orchestra = [Guitar(), Guitar(), Drums(), Kaczka()]
 for instrument in orchestra:
     print(instrument.play())
 
@@ -76,8 +81,8 @@ from abc import ABC, abstractmethod
 
 
 class Swallow(ABC):
-    def __init__(self):
-        self.base_speed = 120
+    def __init__(self, base_speed=120):
+        self.base_speed = base_speed
         self.load_factor = 15
         self.number_of_coconuts = 3
 
@@ -87,6 +92,7 @@ class Swallow(ABC):
 
 
 class EuropeanSwallow(Swallow):
+
     def get_speed(self):
         return self.base_speed
 
@@ -97,6 +103,7 @@ class AfricanSwallow(Swallow):
 
 
 class NorwegianSwallow(Swallow):
+
     def get_speed(self):
         return self.base_speed - self.load_factor * self.number_of_coconuts * self.number_of_coconuts
 

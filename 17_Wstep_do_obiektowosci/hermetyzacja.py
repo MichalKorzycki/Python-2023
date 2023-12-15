@@ -22,9 +22,12 @@ class Employee:
 
 
 john = Employee('John Doe', 'computer lab', 1000)
+john.get_salary()
+
+
 john.__salary  # error
 
-john.get_salary()
+
 
 john._Employee__salary
 
@@ -36,17 +39,17 @@ class Point:
         self.x = x
         self.y = y
 
-
+    @property
     def r(self):
         return math.sqrt(self.x * self.x + self.y * self.y)
 
 
 p = Point(3.0, 4.0)
-p
+
 print(p.r)
 p.r = 7  # error
-p.r()
-# Anatomia obiektu
+p.r()  # error
 
+# Anatomia obiektu
 print(p.__dict__)
 print(Point.__dict__)

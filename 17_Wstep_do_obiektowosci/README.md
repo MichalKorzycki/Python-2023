@@ -1,4 +1,4 @@
-# 18. Wstęp do obiektowości
+# 17. Wstęp do obiektowości
 
 ---
 
